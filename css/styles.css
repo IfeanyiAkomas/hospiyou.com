@@ -81,88 +81,174 @@ pre{
     color: var(--bodytext-color);
     padding: 10px;
     font-weight: 500;
-    margin: 0 5px;
+    margin: 5px;
 }
 
 .nav ul li a:hover{
-    border-bottom: 2px var(--primary-color);
-    color: rgb(7, 75, 102);
-
+    border-bottom: 2px solid var(--button-color);
+    color: var(--buttonhover-color);
+    cursor: pointer;
 }
 
 .navbar .flex{
     justify-content: space-between;
 }
 
-/* Languages */
-.languages .flex{
-    flex-wrap: wrap;
+.navbar .navbtn{
+    border-radius: 30px; 
+    background-color: var(--button-color); 
+    padding: 10px; 
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    list-style-type: none;
 }
 
-.languages .card{
+.navbar .navbtn:hover{
+    background: var(--buttonhover-state);
+    cursor: pointer;
+}
+
+.top{
+    margin-top: 30px; 
+    padding: 10px; 
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
-    margin: 10px 10px 40px 40px;
-    transition: transform 0.2s ease;
 }
 
-.languages .card h4{
+.mqh{
+    margin-top: 50px; 
+    font-size: 38px; 
+    font-weight: 900; 
+    text-align: center; 
+    line-height: 50px; 
+    margin: auto; 
+    max-width: 700px; 
+    background: -webkit-linear-gradient(left, var(--bodytext-color), var(--button-color)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hospimg:hover{
+    transform: scale(0.95);
+}
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .team-member {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .team-member {
+      flex-basis: calc(50% - 10px);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .team-member {
+      flex-basis: calc(33.3333% - 10px);
+    }
+  }
+  
+  .team-member img {
+    width: 90%;
+  }
+  
+  .team-member img:hover {
+    transform: scale(1.05);
+  }
+  
+  .team-member h3 {
+    margin-top: 10px;
     font-size: 20px;
-    margin-bottom: 10px;
-
-}
-
-.languages .card:hover{
-    transform: translateY(-15px);
-}
-
-
-.feature_card_top{
-    -webkit-animation: slideInFromTop 0.6s;
-}
-
-.feature_card_bottom {
-    -webkit-animation: slideInFromBottom 0.6s;
-}
+    font-weight: bold;
+  }
+  
+  .team-member .short-description {
+    margin-top: 10px;
+    overflow: hidden;
+    height: 50px;
+    transition: height 0.5s ease-out;
+    }
+    
+    .team-member .full-description {
+    margin-top: 10px;
+    display: none;
+    }
+    
+    .team-member .read-more {
+    margin-top: 10px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    }
+    
+    .team-member.open .short-description {
+    height: auto;
+    }
+    
+    .team-member.open .full-description {
+    display: block;
+    }
+  
+  
+  
 
 /* Animations */
-@keyframes slideInFromLeft{
+@-webkit-keyframes slideInFromLeft{
     0%{
-        transform: translateX(-100);
+        -webkit-transform: translateX(-100);
     }
     100%{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
     }
 }
 
-@keyframes slideInFromRight{
+@-webkit-keyframes slideInFromRight{
     0%{
-        transform: translateX(100);
+        -webkit-transform: translateX(100);
     }
     100%{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
     }
 }
 
-@keyframes slideInFromTop{
+@-webkit-keyframes slideInFromTop{
     0%{
-        transform: translateY(-100);
+        -webkit-transform: translateY(-100);
     }
     100%{
-        transform: translateY(0);
+        -webkit-transform : translateY(0);
     }
 }
 
-@keyframes slideInFromBottom{
+@-webkit-keyframes slideInFromBottom{
     0%{
-        transform: translateY(100);
+        -webkit-transform: translateY(100);
     };
     100%{
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
     };
 }
 
 /* Mobile */
-@media (max-width:500px){
+@media (max-width:800px){
+    body{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
     .navbar{
         height: 50px;
     }
@@ -175,14 +261,43 @@ pre{
        display: none;
     }
 
-    .nav .btn {
-        text-decoration: underline;
-        background-color: var(--background2-color);
-        color: #047aed;
+    .navbar .navbtn {
+        background: white;
+        font-size: 16px;
+        text-decoration: underline var(--button-color);
+        color: var(--button-color);
+        list-style: none;
+    }
+
+    .top{
+        margin-top: 7px;
+    }
+
+    .mqh{
+        font-size: 34px;
+        line-height: 2.3rem;
+        max-width: 400px;
     }
 
     .ellipses{
-        display: none;
+        display: flex;
+        margin-top: 20px;
+        background-color: #80E142;
+    }
+
+    .ellipses img :first-child{
+        background-color: rgb(250, 19, 135);
+        top: 500px;
+    }
+
+    .ellipses img :nth-child(1){
+        background-color: rgb(250, 19, 135);
+        top: 500px;
+    }
+
+    .ellipses img :nth-child(2){
+        background-color: green;
+        top: 500px;
     }
 
     form input{
@@ -190,10 +305,59 @@ pre{
     }
 
     form button {
+        margin: 5px;
         display: flex;
         width: 70vw;
         height: 50px;
         color: white;
         text-decoration: none;
     }
+
+    .hospimg :first-child{
+        display: none;
+    }
+
+    .hospimg{
+        margin: 40px auto;
+        justify-content: center;
+        margin-bottom: -50px;
+    }
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+  }
+  
 }

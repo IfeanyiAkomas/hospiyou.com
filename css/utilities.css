@@ -1,22 +1,15 @@
 /* Utilities */
 
-.card{
-    background-color: #fff;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    padding: 20px;
-    margin: 10px
-    ;
-}
-
-
 .feature_card{
     margin: 10px; 
     padding: 15px; 
     width: 300px; 
     height: 300px; 
     border-radius: 10px;
+}
+
+.feature_card:hover{
+    transform: scale(1.05);
 }
 
 .feature_card img {
@@ -251,3 +244,13 @@
 .p-5{
     padding: 4rem;
 }
+
+.col-md-6 {
+    width: 50%;
+    float: left;
+}
+
+.col-md-4 {
+    width: 33.333333%;
+    float: left;
+  }

@@ -8,10 +8,10 @@
         <link rel="stylesheet" href="/css/styles.css">
     </head>
 <body>
-    <div style="margin: 0; padding: 5px; height: 100vh; width: 100%; background-color: var(--background-color);">
+    <div style="padding: 5px; height: 100vh; width: 100%; background-color: var(--background-color);">
         <!-- Nav bar -->
         <div class="navbar" style="background-color: var(--background-color)">
-           <div class="container flex" style="height: 100%; justify-content: space-between; background-color: var(--whitebg-color); border-radius: 10px;">
+           <div class="container flex" style="height: 60px; justify-content: space-between; background-color: var(--whitebg-color); border-radius: 10px;">
                <h2 class="logo" style="color: var(--gradient-color);"><strong>Hospiyou</strong></h2>
                <nav class="nav">
                    <ul>
@@ -21,12 +21,11 @@
                        <li><a href="#">Contact Us</a></li>
                    </ul>
                </nav>
-               <button class="btn" style="border-radius: 30px; background-color: var(--button-color); padding: 10px; font-size: 14px;"><strong>Join waitlist</strong></button>
+               <a class="navbtn"><strong>Join waitlist</strong></a>
            </div>
-           <div class="container" style="margin-top: 50px; padding: 10px; justify-content: center; align-items: center; text-align: center;">
+           <div class="container top">
             <p style="margin-top: 50px; color: var(--gradient-color); font-weight: 700; ">We are Hospiyou, we exist because you do.</p>
-            <p style="margin-top: 50px; font-size: 38px; font-weight: 900; text-align: center; line-height: 50px; margin: auto; max-width: 700px; background: -webkit-linear-gradient(left, var(--bodytext-color), var(--button-color)); -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;">Making Quality Healthcare Available For Everyone.</p>
+            <p class="mqh">Making Quality Healthcare Available For Everyone.</p>
             <p style="padding: 20px; margin-top: 50px; color: var(--bodytext-color); max-width: 600px; margin: auto; font-size: 18;">Assisting people get medically tested from anywhere at anytime, fix appointments with medical doctors, and provide access to ambulace systems in cases of emergency.</p>
         </div>
 
@@ -40,7 +39,16 @@
         </div>
     </div>
 
-    <!-- Ellipses -->
+    <!-- Modal for mobile onclick Join waitlist -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Modal Content Goes Here</p>
+        </div>
+      </div>
+      
+
+    <!-- Ellipses for web-->
     <div class="ellipses">
         <img style="width: 100%; position: absolute; top: 450px; z-index: 1;" src="Hospiyou background pattern, eclipse, and blur effect - mobile/Vector 4.png" alt="">
         <img  style="width: 100%; position: absolute; top: 450px; z-index: 1;"src="Hospiyou background pattern, eclipse, and blur effect - mobile/Vector 5.png" alt="">
@@ -49,7 +57,7 @@
     </div>
 
     <!-- What is Hospiyou Section -->
-    <div class="container" style="margin-top: 100px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; position: relative; z-index: 2;">
+    <section class="container" style="margin-top: 100px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; position: relative; z-index: 2;">
         <div>
             <p style="color: var(--bodytext-color); font-weight: 500;">We know you are probably wondering...</p>
             <p style="color: var(--bodytext-color); font-size: 36px; font-weight: 800;">What is Hospiyou?</p>
@@ -64,10 +72,10 @@
             <img src="Hospiyou images and background for web/image-8.png" style="width: 200px; height: 200px;" alt="hospiyou doctor & patient">
             <img src="Hospiyou images and background for web/image-11.png" style="width: 250px; height:400px;" alt="hospiyou doctor holding phone">
         </div>
-    </div>
+    </section>
 
     <!-- Key features Section -->
-    <div class="container" style="margin-top: 100px;">
+    <section class="container" id="key_features" style="margin-top: 100px;">
         <div>
             <p style="color: var(--bodytext-color); font-size: 36px; font-weight: 800; margin-bottom: 70px;">Our Key Features</p>
         </div>
@@ -103,14 +111,176 @@
                 <p>With Hospiyou, you will be able to fix appointments with specialists, and get adequate help and attention.</p>
             </div>
         </div>
-    </div> 
+    </section> 
+    
+    <!-- Team Section -->
+    <section class="container" id="team" style="margin-top: 100px;">
+        <div>
+            <p style="color: var(--bodytext-color); font-size: 36px; font-weight: 800; margin-bottom: 70px;">Our Team</p>
+        </div>
+        <div class="team-container">
+            <!-- Njoku Godswill -->
+            <div class="team-member">
+              <img src="Hospiyou images and background for web/njoku_godswill.png" alt="Team member 1">
+              <h3>Njoku God'swill</h3>
+              <h3>CEO & Founder of Hospiyou</h3>
+              <p class="short-description">Medical student at the University of Varna
+                Neurosurgery intern at University Hospital St. Marina</p>
+              <p class="full-description">Medical student at the University of Varna
+                Neurosurgery intern at University Hospital St. Marina
+                Award-winning professional
+                Founded HospiYou after witnessing poor healthcare and patient complaints in hospitals, inspired by the death of a childhood friend.</p>
+              <button class="btn">Read more</button>
+            </div>
 
+            <!-- Akomas Ifeanyi -->
+            <div class="team-member">
+              <img src="Hospiyou images and background for web/akomas_ifeanyi.png" alt="Team member 2">
+              <h3>Akomas Ifeanyi</h3>
+              <h3>CTO & Co-Founder of Hospiyou</h3>
+              <p class="short-description">Full-stack Android & iOS developer at Luvleen, a social application.
+                Frontend Engineer at HibridEx, a cryptocurrency application facilitating P2P transactions and user workflow.</p>
+              <p class="full-description">
+                Full-stack Android & iOS developer at Luvleen, a social application
+                Frontend Engineer at HibridEx, a cryptocurrency application facilitating P2P transactions and user workflow.
+                Computer Science student at the University of Port Harcourt
+                Marketing Director and Manager at Diamond Integrated Services, developed a proprietary software solution for user database management and financial tracking
+                As Co-founder of Ultimax Inc., an EdTech startup in 2020, he empowered students by providing essential skills for gainful employment
+                Passionate about creating impactful solutions and revolutionizing the healthcare industry using his expertise in app development
+                Strong track record of success and dedication to his craft makes him a persuasive candidate for any position in the technology industry.
+            </p>
+              <button class="btn">Read more</button>
+            </div>
+                   
 
-    <div class="social">
-        <a href="#"><i class="fab fa-github fa-2"></i></a>
-        <a href="#"><i class="fab fa-facebook fa-2"></i></a>
-        <a href="instagram.com/hospiyou"><i class="fab fa-instagram fa-2"></i></a>
-        <a href="twitter.com/HospiYou"><i class="fab fa-twitter fa-2"></i></a>
-    </div>
+            <!-- Birthright Ntuk -->
+            <div class="team-member">
+              <img src="Hospiyou images and background for web/birthright_ntuk.png" alt="Team member 3">
+              <h3>Birthright Ntuk</h3>
+              <h3>Product Designer</h3>
+              <p class="short-description"></p>
+              <p class="full-description"></p>
+              <button class="btn">Read more</button>
+            </div>
+            
+            <!-- Armon Rabie -->
+            <div class="team-member">
+                <img src="Hospiyou images and background for web/armon_rabie.png" alt="Team member 4">
+                <h3>Armon Rabie</h3>
+                <h3></h3>
+                <p class="short-description"></p>
+                <p class="full-description"></p>
+                <button class="btn">Read more</button>
+              </div>
+            
+            <!-- Ogbeye Phillip -->
+            <div class="team-member">
+                <img src="Hospiyou images and background for web/ogbeye_phillip.png" alt="Team member 5">
+                <h3>Ogbeye Phillip</h3>
+                <h3></h3>
+                <p class="short-description"></p>
+                <p class="full-description"></p>
+                <button class="btn">Read more</button>
+              </div>
+          
+            <!-- Osondu Covenant -->
+            <div class="team-member">
+                <img src="Hospiyou images and background for web/osondu_covenant.jpeg" alt="Team member 6">
+                <h3>Osondu Covenant</h3>
+                <h3></h3>
+                <p class="short-description"></p>
+                <p class="full-description"></p>
+                <button class="btn">Read more</button>
+              </div>
+              
+            <!-- Vianney Chiamaka -->
+            <div class="team-member">
+                <img src="Hospiyou images and background for web/vianney_chiamaka.png" alt="Team member 7">
+                <h3>Vianney Chiamaka</h3>
+                <h3></h3>
+                <p class="short-description"></p>
+                <p class="full-description"></p>
+                <button class="btn">Read more</button>
+              </div>
+              
+              <!-- Omotayo Tomiwa -->
+            <div class="team-member">
+                <img src="Hospiyou images and background for web/omotayo_tomiwa.jpeg" alt="Team member 8">
+                <h3>Omotayo Tomiwa</h3>
+                <h3></h3>
+                <p class="short-description"></p>
+                <p class="full-description"></p>
+                <button class="btn">Read more</button>
+            </div>
+            
+            <!-- Silver Davies -->
+            <div class="team-member">
+                <img src="Hospiyou images and background for web/silver_davies.png" alt="Team member 9">
+                <h3>Silver Davies</h3>
+                <h3></h3>
+                <p class="short-description"></p>
+                <p class="full-description"></p>
+                <button class="btn">Read more</button>
+              </div>
+              
+            <!--  -->
+            <div class="team-member">
+                <img src="Hospiyou images and background for web/akomas_ifeanyi.png" alt="Team member 10">
+                <h3></h3>
+                <h3></h3>
+                <p class="short-description"></p>
+                <p class="full-description"></p>
+                <button class="btn">Read more</button>
+              </div>
+            </div>
+        </div>    
+    </section>      
+
+    <!-- Some javascript code -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the <span> element that closes the modal
+        var closeBtn = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on the button, open the modal
+        function openModal() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        closeBtn.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+        // Team members button click
+        const teamMembers = document.querySelectorAll('.team-member');
+
+        teamMembers.forEach((teamMember) => {
+        const readMoreBtn = teamMember.querySelector('.read-more');
+
+        readMoreBtn.addEventListener('click', () => {
+            const isOpen = teamMember.classList.contains('open');
+            
+            if (isOpen) {
+            teamMember.classList.remove('open');
+            } else {
+            teamMembers.forEach((otherTeamMember) => {
+                otherTeamMember.classList.remove('open');
+            });
+            teamMember.classList.add('open');
+            }
+        });
+        });
+        </script>
+        
 </body>
 </html>
